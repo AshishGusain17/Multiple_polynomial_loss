@@ -1,0 +1,23 @@
+<%- include('include/head.ejs') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+    <script src="libraries/p5.js"></script>
+    <script src="libraries/p5.dom.js"></script>
+    <script src="libraries/p5.sound.js"></script>
+    <script src="sketchpoly_ex.js"></script>
+</head>
+
+<body>
+    <div class='div2'>Draw curves over the canvas while dragging mouse</div>
+    <div class=div3>Select the degree of polynomial</div>
+    <form id='form' action='http://localhost:4000/index_form' method='POST'>
+        <input id="degree"  type="number" name="degree"  value=1   min="1"   max="10" step='1'>
+        <input id="speed"   type="hidden" name="speed"   value=<%= speed %>>    
+        <input id="canvas" type="submit" value="New Canvas">
+        
+    </form>
+    <a class='linkdown' href='/'>Click to change the speed</a>
+    
+</body>
+</html>
+    
